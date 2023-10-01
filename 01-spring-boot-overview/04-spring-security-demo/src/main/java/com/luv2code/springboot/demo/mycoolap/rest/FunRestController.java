@@ -1,0 +1,34 @@
+package com.luv2code.springboot.demo.mycoolap.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class FunRestController {
+
+    // EXPOSE "/" that return "Hello Wolrd"
+
+@GetMapping("/")
+    public String sayHello(){
+    return "Hello world!";
+}
+
+//Expose a new endpoint for "Workout"
+    @GetMapping("/workout")
+    public String getDailyWorkout(){
+    return "Run a hard 5K!";
+    }
+
+    //expose a new endpoint for "fortune"
+    @GetMapping("/fortune")
+    public String getDailyFortune(){
+        return "Today is your lucky day.";
+    }
+
+
+
+
+
+
+
+}
